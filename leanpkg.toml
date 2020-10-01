@@ -1,8 +1,8 @@
 [package]
-name = "rubiks_cube"
+name = "rubiks-cube-group"
 version = "0.1"
-lean_version = "leanprover-community/lean:3.18.4"
+lean_version = "leanprover-community/lean:3.20.0"
 path = "src"
 
 [dependencies]
-mathlib = {git = "https://github.com/leanprover-community/mathlib", rev = "06df50382100448ef40a152d664bee676d758c27"}
+mathlib = {git = "https://github.com/leanprover-community/mathlib", rev = "bcc7c024e7d995bb5be981f95f710cd7a84b8d4f"}
