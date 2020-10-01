@@ -535,8 +535,9 @@ namespace rubiks_cube
       },
       congr,
       apply fin.eq_of_veq,
+      rw swap_apply_def,
       dsimp,
-      rw [swap_apply_def, swap_apply_def],
+      rw swap_apply_def,
       cases fin.decidable_eq _ ⟨k, _⟩ i with k_ne_i k_eq_i,
       {
         rw if_neg, swap,
@@ -563,6 +564,7 @@ namespace rubiks_cube
             apply fin.eq_of_veq,
             apply h,
           },
+          refl,
         },
         rw if_pos, swap,
         {
@@ -573,7 +575,6 @@ namespace rubiks_cube
           rw ← k_eq_j,
           refl,
         },
-        refl,
       },
       rw if_pos, swap,
       {
@@ -584,7 +585,6 @@ namespace rubiks_cube
         rw ← k_eq_i,
         refl,
       },
-      refl,
     end
 
     theorem perm_to_list {n : ℕ} {a : array n α} {p : perm (fin n)} : (perm_array a p).to_list ~ a.to_list :=

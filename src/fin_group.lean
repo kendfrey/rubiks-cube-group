@@ -54,7 +54,7 @@ begin
   },
   {
     simp only [(*), has_inv.inv, inv, fin.add_def, fin.sub_def],
-    rw [coe_val_of_lt, coe_val_of_lt]; try { simp [lt_of_succ_lt a_is_lt], },
+    rw [coe_val_of_lt, coe_val_of_lt]; try { simp [lt_of_succ_lt a_property], },
     have : (n - a_val + a_val.succ) = n.succ,
     {
       rw add_succ,
@@ -62,7 +62,7 @@ begin
       apply nat.sub_add_cancel,
       apply le_of_lt,
       apply lt_of_succ_lt_succ,
-      apply a_is_lt,
+      apply a_property,
     },
     rw this,
     apply mod_self,
